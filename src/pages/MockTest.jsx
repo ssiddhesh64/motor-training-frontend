@@ -1,5 +1,7 @@
+// MockTest.jsx (Pure Tailwind - No external UI libs)
 import { useState, useEffect } from 'react';
 import { questions as allQuestions } from '../data/questions';
+import StartScreen from '../components/StartTestScreen';
 
 function shuffle(arr) {
   return [...arr].sort(() => 0.5 - Math.random());
@@ -46,22 +48,7 @@ export default function MockTest() {
   };
 
   if (!started) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <div className="bg-white rounded-2xl shadow-lg p-8 text-center max-w-md w-full">
-          <h1 className="text-2xl font-bold mb-4">RTO Mock Test</h1>
-          <div className="text-gray-600 mb-8">
-            15 Questions • 30 Minutes • Pass: 11
-          </div>
-          <button
-            className="w-full bg-blue-500 text-white py-3 rounded-xl hover:bg-blue-700"
-            onClick={() => setStarted(true)}
-          >
-            Start Test
-          </button>
-        </div>
-      </div>
-    );
+    return <StartScreen onStart={() => setStarted(true)} />;
   }
 
   if (!questions.length) return null;
@@ -80,7 +67,7 @@ export default function MockTest() {
               Score: {score} / {TOTAL}
             </p>
             <p
-              className={`mt-2 font-semibold ${passed ? 'text-green-600' : 'text-red-700'}`}
+              className={`mt-2 font-semibold ${passed ? 'text-green-600' : 'text-red-600'}`}
             >
               {passed ? 'PASS' : 'FAIL'}
             </p>
@@ -123,7 +110,7 @@ export default function MockTest() {
                   </div>
 
                   {userAns !== correct && (
-                    <p className="text-sm text-red-700 mt-2">
+                    <p className="text-sm text-red-600 mt-2">
                       Your answer was incorrect
                     </p>
                   )}
@@ -148,7 +135,7 @@ export default function MockTest() {
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
           <h1 className="font-bold text-xl">RTO Mock Test</h1>
-          <div className="font-mono text-red-700 text-lg">
+          <div className="font-mono text-red-600 text-lg">
             ⏱ {minutes}:{seconds.toString().padStart(2, '0')}
           </div>
         </div>
