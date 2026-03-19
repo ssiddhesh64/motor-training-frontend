@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Gallery from './pages/Gallery';
@@ -12,7 +12,7 @@ import MockTest from './pages/MockTest';
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <ToastContainer
         position="top-right"
         autoClose={2000}
@@ -32,7 +32,7 @@ function App() {
       </Routes>
       <Footer />
       <FloatingWhatsApp />
-    </BrowserRouter>
+    </>
   );
 }
 
