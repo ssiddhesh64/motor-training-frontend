@@ -48,6 +48,7 @@ function Navbar() {
           {renderLink('/services', 'Services')}
           {renderLink('/gallery', 'Gallery')}
           {renderLink('/contact', 'Contact')}
+          {renderLink('/mocktest', 'Mock Test')}
         </div>
 
         {/* Mobile Button */}

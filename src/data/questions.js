@@ -1,0 +1,543 @@
+// questions.js
+export const questions = [
+  {
+    id: 1,
+    question:
+      'What should you do near a pedestrian crossing when people are waiting?',
+    options: [
+      'Slow down, press horn and proceed',
+      'Press horn and proceed',
+      'Stop the vehicle, wait until pedestrians cross and then move forward',
+    ],
+    answer: 2,
+  },
+  {
+    id: 2,
+    question:
+      'What should you do when approaching a narrow bridge and another vehicle is entering?',
+    options: [
+      'Wait until the other vehicle crosses',
+      'Switch on headlight and cross',
+      'Increase speed and cross quickly',
+    ],
+    answer: 0,
+  },
+  {
+    id: 3,
+    question:
+      'What should you do if you see an accident with injured passengers?',
+    options: [
+      'Report to police station',
+      'Take vehicle to police station',
+      'Provide medical help and report within 24 hours',
+    ],
+    answer: 2,
+  },
+  {
+    id: 4,
+    question: 'On a one-way road, what is not allowed?',
+    options: ['Driving in reverse', 'Overtaking', 'Parking'],
+    answer: 0,
+  },
+  {
+    id: 5,
+    question: 'You can overtake a vehicle from?',
+    options: ['Left side', 'Right side', 'Any side'],
+    answer: 1,
+  },
+  {
+    id: 6,
+    question: 'At an unguarded railway crossing, what should you do?',
+    options: [
+      'Wait for train',
+      'Press horn and cross',
+      'Stop, check both sides, then cross',
+    ],
+    answer: 2,
+  },
+  {
+    id: 7,
+    question: 'Transport vehicles are identified by?',
+    options: ['Vehicle color', 'Number plate', 'Tyre size'],
+    answer: 1,
+  },
+  {
+    id: 8,
+    question: "Learner's license validity?",
+    options: ['30 days', '6 months', 'Until driving license is obtained'],
+    answer: 2,
+  },
+  {
+    id: 9,
+    question: 'If no footpath exists, pedestrians should walk on?',
+    options: ['Right side', 'Left side', 'Any side'],
+    answer: 1,
+  },
+  {
+    id: 10,
+    question: 'Free passage must be given to?',
+    options: [
+      'Express buses',
+      'Police vehicles',
+      'Fire service vehicles and ambulances',
+    ],
+    answer: 2,
+  },
+
+  {
+    id: 11,
+    question: 'Opposite vehicles should pass from?',
+    options: ['Left side', 'Right side', 'Any side'],
+    answer: 0,
+  },
+  {
+    id: 12,
+    question: 'When can you overtake?',
+    options: [
+      'With signal from driver ahead',
+      'When road is wide enough',
+      'While going downhill',
+    ],
+    answer: 1,
+  },
+  {
+    id: 13,
+    question: 'You should drive on which side in India?',
+    options: ['Left', 'Right', 'Center'],
+    answer: 0,
+  },
+  {
+    id: 14,
+    question: 'If parked at night, what should you do?',
+    options: ['Lock vehicle', 'Keep park light on', 'All of the above'],
+    answer: 2,
+  },
+  {
+    id: 15,
+    question: 'When should fog lamps be used?',
+    options: ['In mist', 'At night', 'When opposite vehicle uses high beam'],
+    answer: 0,
+  },
+  {
+    id: 16,
+    question: 'Zebra lines are for?',
+    options: ['Pedestrian crossing', 'Stopping vehicles', 'Overtaking'],
+    answer: 0,
+  },
+  {
+    id: 17,
+    question: 'If an ambulance approaches?',
+    options: [
+      'No preference',
+      'Give way only if clear',
+      'Move aside and allow passage',
+    ],
+    answer: 2,
+  },
+  {
+    id: 18,
+    question: 'Red traffic light means?',
+    options: ['Slow down', 'Stop', 'Proceed with caution'],
+    answer: 1,
+  },
+  {
+    id: 19,
+    question: 'Parking in front of hospital is?',
+    options: ['Not correct', 'Correct', 'Depends'],
+    answer: 0,
+  },
+  {
+    id: 20,
+    question: 'Slippery road sign means?',
+    options: [
+      'Drive faster',
+      'Reduce speed and change gear',
+      'Apply brake but maintain speed',
+    ],
+    answer: 1,
+  },
+
+  {
+    id: 21,
+    question: 'Overtaking is prohibited when?',
+    options: [
+      'Roads are slippery',
+      'Danger to oncoming traffic',
+      'All of the above',
+    ],
+    answer: 2,
+  },
+  {
+    id: 22,
+    question: 'Overtaking near a bend is?',
+    options: ['Not allowed', 'Allowed', 'Allowed with caution'],
+    answer: 0,
+  },
+  {
+    id: 23,
+    question: 'Drunken driving is?',
+    options: [
+      'Allowed at night',
+      'Allowed during day',
+      'Prohibited at all times',
+    ],
+    answer: 2,
+  },
+  {
+    id: 24,
+    question: 'Honking is prohibited near?',
+    options: ['Religious places', 'Hospitals & courts', 'Police stations'],
+    answer: 0,
+  },
+  {
+    id: 25,
+    question: 'Rear view mirror is used for?',
+    options: ['See traffic behind', 'See passengers', 'Decoration'],
+    answer: 0,
+  },
+  {
+    id: 26,
+    question: 'Boarding or alighting while vehicle in motion is?',
+    options: ['Allowed in autos', 'Allowed in buses', 'Prohibited'],
+    answer: 2,
+  },
+  {
+    id: 27,
+    question: 'Mobile phone should not be used?',
+    options: ['At home', 'In office', 'While driving'],
+    answer: 2,
+  },
+  {
+    id: 28,
+    question: 'Overtaking is not allowed when?',
+    options: ['Road is wide', 'Road not visible clearly', 'No potholes'],
+    answer: 1,
+  },
+  {
+    id: 29,
+    question: 'Why avoid crossing near stopped vehicles?',
+    options: ['Inconvenience', 'Pedestrians issue', 'Drivers may not see'],
+    answer: 2,
+  },
+  {
+    id: 30,
+    question: 'Documents needed for private vehicle?',
+    options: ['GCR + RC', 'Insurance, RC, DL, Tax', 'Permit + RC'],
+    answer: 1,
+  },
+
+  {
+    id: 31,
+    question: 'PUC validity?',
+    options: ['1 year', '6 months', '2 years'],
+    answer: 0,
+  },
+  {
+    id: 32,
+    question: 'Minimum age for license (no gear)?',
+    options: ['16', '21', '18'],
+    answer: 2,
+  },
+  {
+    id: 33,
+    question: 'School nearby sign means?',
+    options: ['Slow down', 'Horn', 'Stop'],
+    answer: 0,
+  },
+  {
+    id: 34,
+    question: 'Left turn signal for two-wheeler?',
+    options: ['Right hand', 'No signal', 'Left hand'],
+    answer: 2,
+  },
+  {
+    id: 35,
+    question: 'One-time tax for car?',
+    options: ['5 years', '15 years', 'Till cancel'],
+    answer: 1,
+  },
+  {
+    id: 36,
+    question: 'Before overtaking ensure?',
+    options: ['Clear view', 'No vehicles', 'Unsafe'],
+    answer: 0,
+  },
+  {
+    id: 37,
+    question: 'Parking prohibited on?',
+    options: ['Footpath', 'One-way', 'Main road'],
+    answer: 0,
+  },
+  {
+    id: 38,
+    question: 'Hand brake used to?',
+    options: ['Park vehicle', 'Sudden brake', 'Reduce speed'],
+    answer: 0,
+  },
+  {
+    id: 39,
+    question: 'Using unregistered vehicle is?',
+    options: ['Illegal', 'Legal', 'Legal if needed'],
+    answer: 0,
+  },
+  {
+    id: 40,
+    question: 'Minimum age for transport license?',
+    options: ['16', '20', '45'],
+    answer: 1,
+  },
+
+  {
+    id: 41,
+    question: 'What is tailgating?',
+    options: ['Driving too close', 'Safe distance', '7 meter gap'],
+    answer: 0,
+  },
+  {
+    id: 42,
+    question: 'Vehicle can be seized if?',
+    options: ['Not registered', 'No insurance', 'Over speed'],
+    answer: 0,
+  },
+  {
+    id: 43,
+    question: 'Yellow light means?',
+    options: ['Slow and stop', 'Drive away', 'Horn and go'],
+    answer: 0,
+  },
+  {
+    id: 44,
+    question: 'Minimum distance rule?',
+    options: ['10m', '5m', 'Safe distance'],
+    answer: 2,
+  },
+  {
+    id: 45,
+    question: 'Defensive driving means?',
+    options: ['Drive cautiously', 'Ignore rules', 'Others careful'],
+    answer: 0,
+  },
+  {
+    id: 46,
+    question: 'Address change intimation time?',
+    options: ['30 days', '90 days', '1 year'],
+    answer: 0,
+  },
+  {
+    id: 47,
+    question: 'Car tax paid once in?',
+    options: ['15 years', '10 years', 'Till old'],
+    answer: 0,
+  },
+  {
+    id: 48,
+    question: '60 km/hr allowed for?',
+    options: ['Car', 'Truck', 'All'],
+    answer: 2,
+  },
+  {
+    id: 49,
+    question: 'While fueling?',
+    options: ['Check air', 'No lights', 'No smoking'],
+    answer: 2,
+  },
+  {
+    id: 50,
+    question: 'Helmet rule?',
+    options: ['Jerkins', 'Helmet', 'Shoes'],
+    answer: 1,
+  },
+
+  {
+    id: 51,
+    question: 'Zig-zag driving is?',
+    options: [
+      'Dangerous to 2-wheelers',
+      'Dangerous to all',
+      'Dangerous to cars',
+    ],
+    answer: 1,
+  },
+  {
+    id: 52,
+    question: 'Flashing yellow means?',
+    options: ['Signal not working', 'Slow down', 'Men at work'],
+    answer: 1,
+  },
+  {
+    id: 53,
+    question: 'Engine braking means?',
+    options: ['Switch off engine', 'Gear down', 'Engine fail'],
+    answer: 1,
+  },
+  {
+    id: 54,
+    question: 'Major accident reason?',
+    options: ['Bad roads', 'Driver fault', 'Mechanical defect'],
+    answer: 1,
+  },
+  {
+    id: 55,
+    question: 'Green signal means?',
+    options: ['Stop', 'Proceed if safe', 'Slow'],
+    answer: 1,
+  },
+  {
+    id: 56,
+    question: 'PSL means?',
+    options: [
+      'Position Signal Look',
+      'Position Speed Look',
+      'Park Signal Look',
+    ],
+    answer: 0,
+  },
+  {
+    id: 57,
+    question: 'Blind spot means?',
+    options: ['Invisible spot', 'Not seen in mirror', 'Headlight glare'],
+    answer: 1,
+  },
+  {
+    id: 58,
+    question: 'L board is?',
+    options: ['Necessary', 'Optional', 'Compulsory'],
+    answer: 2,
+  },
+  {
+    id: 59,
+    question: 'Check tyre pressure when?',
+    options: ['Cold', 'Hot', 'Any time'],
+    answer: 0,
+  },
+  {
+    id: 60,
+    question: 'Parallel parking means?',
+    options: ['Right angle', 'Behind', 'Parallel'],
+    answer: 2,
+  },
+
+  {
+    id: 61,
+    question: 'Speed rule section 112?',
+    options: ['Do not exceed', 'No alcohol', 'Pay tax'],
+    answer: 0,
+  },
+  {
+    id: 62,
+    question: 'Speed near school?',
+    options: ['25 km/hr', '35', '15'],
+    answer: 0,
+  },
+  {
+    id: 63,
+    question: 'Max load height?',
+    options: ['3.8m', '3m', 'No limit'],
+    answer: 0,
+  },
+  {
+    id: 64,
+    question: 'Speed near procession?',
+    options: ['15 km/hr', '25', '35'],
+    answer: 0,
+  },
+  {
+    id: 65,
+    question: 'Do not drive when?',
+    options: ['Alcohol', 'Overspeed', 'Overload'],
+    answer: 2,
+  },
+  {
+    id: 66,
+    question: 'Auto speed ghat road?',
+    options: ['30', '40', '20'],
+    answer: 0,
+  },
+  {
+    id: 67,
+    question: 'Heavy vehicle ghat speed?',
+    options: ['35', '25', '15'],
+    answer: 1,
+  },
+  {
+    id: 68,
+    question: 'Auto speed city?',
+    options: ['40', '30', '20'],
+    answer: 0,
+  },
+  {
+    id: 69,
+    question: 'Medium vehicle ghat speed?',
+    options: ['45', '35', '25'],
+    answer: 1,
+  },
+  {
+    id: 70,
+    question: 'U-turn at signal?',
+    options: ['Go elsewhere', 'Wait green', 'If police'],
+    answer: 1,
+  },
+
+  {
+    id: 71,
+    question: 'Downhill speed control?',
+    options: ['Low gear', 'Stop engine', 'Neutral'],
+    answer: 0,
+  },
+  {
+    id: 72,
+    question: 'Horn should be used?',
+    options: ['Right of way', 'Warn others', 'Call friend'],
+    answer: 1,
+  },
+  {
+    id: 73,
+    question: 'Flashing yellow signal?',
+    options: ['Not working', 'Slow and proceed', 'Men at work'],
+    answer: 1,
+  },
+  {
+    id: 74,
+    question: 'Slow down where?',
+    options: ['Footpath', 'Hill top', 'None'],
+    answer: 0,
+  },
+  {
+    id: 75,
+    question: 'Keep distance in rain because?',
+    options: ['Direction change', 'Fog lights', 'Stops suddenly'],
+    answer: 2,
+  },
+  {
+    id: 76,
+    question: 'Hard steering cause?',
+    options: ['Worn tyre', 'Over inflated', 'Under inflated'],
+    answer: 2,
+  },
+  {
+    id: 77,
+    question: 'At junction low visibility?',
+    options: ['Look both ways', 'Look right', 'Move fast'],
+    answer: 0,
+  },
+  {
+    id: 78,
+    question: 'Two-lane highway rule?',
+    options: ['Keep left', 'Least traffic', 'Right lane'],
+    answer: 0,
+  },
+  {
+    id: 79,
+    question: 'White edge line means?',
+    options: ['No parking', 'No overtaking', 'Edge of road'],
+    answer: 2,
+  },
+  {
+    id: 80,
+    question: 'Moving from parking?',
+    options: ['Check mirrors & signal', 'Look around', 'Horn'],
+    answer: 0,
+  },
+];
+
+export default questions;

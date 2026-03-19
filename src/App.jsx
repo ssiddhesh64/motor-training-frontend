@@ -8,6 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import './index.css';
 import Footer from './pages/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsapp';
+import MockTest from './pages/MockTest';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/mocktest" element={<MockTest />} />
       </Routes>
       <Footer />
       <FloatingWhatsApp />
