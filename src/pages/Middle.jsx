@@ -21,27 +21,46 @@ function Middle() {
         {/* CONTENT CARD */}
         <div className="mt-10 bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100 text-left space-y-6 hover:shadow-xl transition duration-300">
           {/* INTRO */}
-          <p className="text-gray-700 leading-relaxed text-lg">
-            Welcome to{' '}
-            <span className="font-semibold text-gray-900">
-              Royal Motor Training School
-            </span>
-            , established in 1989 and accredited with an 'A' grade by the RTO
-            authority. Over{' '}
-            <span className="font-semibold text-blue-600">2 lakh+</span>{' '}
-            students have successfully graduated from our institute.
-          </p>
+          <div className="space-y-6">
+            {/* BLOCK 1 */}
+            <div className="flex flex-col gap-2">
+              <h3 className="text-lg font-semibold text-gray-800">
+                Royal Motor Training School
+              </h3>
 
-          <p className="text-gray-600 leading-relaxed">
-            We go beyond just helping you pass driving tests. Our caring
-            instructors ensure every student receives complete attention and
-            practical knowledge.
-          </p>
+              <span className="text-gray-600 leading-relaxed">
+                Established in 1989 and accredited with an 'A' grade by the RTO
+                authority. Over{' '}
+                <span className="font-semibold text-blue-600">2 lakh+</span>{' '}
+                students have successfully graduated from our institute.
+              </span>
+            </div>
 
-          <p className="text-gray-600 leading-relaxed">
-            We handle your complete licence process smoothly so you can focus on
-            learning with confidence.
-          </p>
+            {/* BLOCK 2 */}
+            <div className="flex flex-col gap-2">
+              <h4 className="text-md font-semibold text-gray-800">
+                Professional Training Approach
+              </h4>
+
+              <span className="text-gray-600 leading-relaxed">
+                We go beyond just helping you pass driving tests. Our caring
+                instructors ensure that every student receives complete
+                attention and hands-on experience.
+              </span>
+            </div>
+
+            {/* BLOCK 3 */}
+            <div className="flex flex-col gap-2">
+              <h4 className="text-md font-semibold text-gray-800">
+                Hassle-Free Licence Process
+              </h4>
+
+              <span className="text-gray-600 leading-relaxed">
+                We handle your entire licence process smoothly and efficiently,
+                allowing you to focus on learning with confidence.
+              </span>
+            </div>
+          </div>
 
           {/* DIVIDER */}
           <div className="border-t border-gray-200 pt-6"></div>
