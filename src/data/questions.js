@@ -65,7 +65,7 @@ export const questions = [
     id: 8,
     question: "Learner's license validity?",
     options: ['30 days', '6 months', 'Until driving license is obtained'],
-    answer: 2,
+    answer: 1,
   },
   {
     id: 9,
