@@ -23,7 +23,7 @@ function Middle() {
           {/* INTRO */}
           <div className="space-y-6">
             {/* BLOCK 1 */}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 pl-4 border-l-4 border-blue-500">
               <h3 className="text-lg font-semibold text-gray-800">
                 Royal Motor Training School
               </h3>
@@ -37,7 +37,7 @@ function Middle() {
             </div>
 
             {/* BLOCK 2 */}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 pl-4 border-l-4 border-blue-500">
               <h4 className="text-md font-semibold text-gray-800">
                 Professional Training Approach
               </h4>
@@ -50,7 +50,7 @@ function Middle() {
             </div>
 
             {/* BLOCK 3 */}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 pl-4 border-l-4 border-blue-500 pb-4">
               <h4 className="text-md font-semibold text-gray-800">
                 Hassle-Free Licence Process
               </h4>
