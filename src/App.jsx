@@ -9,10 +9,12 @@ import './index.css';
 import Footer from './pages/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsapp';
 import MockTest from './pages/MockTest';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <ToastContainer
         position="top-right"
         autoClose={2000}
