@@ -6,6 +6,7 @@ import {
   FaMapMarkerAlt,
   FaClock,
 } from 'react-icons/fa';
+import GoogleMaps from '../components/GoogleMaps';
 
 function Contact() {
   const [form, setForm] = useState({
@@ -70,8 +71,8 @@ function Contact() {
     <section className="bg-gray-50 py-16 px-6">
       <div className="mx-auto">
         {/* FORM */}
-        <div className="flex justify-center w-full gap-12">
-          <div className="bg-white p-8 rounded-xl shadow-md">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-center w-full gap-8 md:gap-12">
+          <div className="bg-white p-8 rounded-xl shadow-md w-full md:w-[45%]">
             <h2 className="text-2xl font-bold text-gray-800">Send Enquiry</h2>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">
@@ -134,7 +135,7 @@ function Contact() {
 
           {/* INFO */}
 
-          <div className="bg-white p-8 rounded-xl shadow-md max-w-md w-full">
+          <div className="bg-white p-8 rounded-xl shadow-md w-full md:w-[45%] max-w-md">
             <h2 className="text-2xl font-bold text-gray-800">
               Contact Information
             </h2>
@@ -206,20 +207,7 @@ function Contact() {
               ></iframe>
             </div>
           </div>
-          <div className="mt-10 flex w-full justify-center">
-            <button
-              onClick={() =>
-                window.open(
-                  'https://maps.app.goo.gl/c8Jqv6v9VwXZQ9s7A',
-                  '_blank'
-                )
-              }
-              className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 hover:scale-105 transition duration-300 shadow-md"
-            >
-              <span>📍</span>
-              <span>Open in Google Maps</span>
-            </button>
-          </div>
+          <GoogleMaps />
         </div>
       </div>
     </section>

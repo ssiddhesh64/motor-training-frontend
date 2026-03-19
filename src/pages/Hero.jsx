@@ -6,7 +6,7 @@ function Hero() {
       <img
         src={drivingImg}
         alt="Driving"
-        className="w-full h-62.5 object-cover"
+        className="w-full h-[400px] object-cover"
       />
     </div>
   );

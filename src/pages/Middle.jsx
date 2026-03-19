@@ -1,3 +1,12 @@
+import { Link } from 'react-router-dom';
+import {
+  FaCheckCircle,
+  FaUsers,
+  FaAward,
+  FaCar,
+  FaIdCard,
+} from 'react-icons/fa';
+
 function Middle() {
   return (
     <section className="px-6 md:px-10 py-12 bg-gray-50">
@@ -6,58 +15,97 @@ function Middle() {
         <h1 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
           Learn Driving with Confidence 🚗
         </h1>
-
         <p className="mt-4 text-gray-600 text-lg md:text-xl">
           Trusted by 2+ lakh students since 1989
         </p>
-
         {/* CONTENT CARD */}
-        <div className="mt-10 bg-white p-8 rounded-2xl shadow-md text-left space-y-6">
-          <p className="text-gray-600 leading-relaxed">
+        <div className="mt-10 bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100 text-left space-y-6 hover:shadow-xl transition duration-300">
+          {/* INTRO */}
+          <p className="text-gray-700 leading-relaxed text-lg">
             Welcome to{' '}
-            <span className="font-semibold text-gray-800">
+            <span className="font-semibold text-gray-900">
               Royal Motor Training School
             </span>
             , established in 1989 and accredited with an 'A' grade by the RTO
-            authority. Over 2 lakh students have successfully graduated from our
-            institute.
+            authority. Over{' '}
+            <span className="font-semibold text-blue-600">2 lakh+</span>{' '}
+            students have successfully graduated from our institute.
           </p>
 
           <p className="text-gray-600 leading-relaxed">
-            We go beyond just helping you pass driving tests. Our caring and
-            polite instructors ensure that every student receives 100% attention
-            throughout the course.
+            We go beyond just helping you pass driving tests. Our caring
+            instructors ensure every student receives complete attention and
+            practical knowledge.
           </p>
 
           <p className="text-gray-600 leading-relaxed">
-            We handle your complete licence process smoothly and efficiently, so
-            you can focus on learning with confidence.
+            We handle your complete licence process smoothly so you can focus on
+            learning with confidence.
           </p>
+
+          {/* DIVIDER */}
+          <div className="border-t border-gray-200 pt-6"></div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="p-4 rounded-xl bg-gray-50 hover:shadow-md transition">
+              <FaUsers className="mx-auto text-blue-600 text-xl mb-2" />
+              <p className="text-xl font-bold">2L+</p>
+              <p className="text-sm text-gray-600">Students</p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-gray-50 hover:shadow-md transition">
+              <FaAward className="mx-auto text-blue-600 text-xl mb-2" />
+              <p className="text-xl font-bold">30+</p>
+              <p className="text-sm text-gray-600">Years</p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-gray-50 hover:shadow-md transition">
+              <FaCar className="mx-auto text-blue-600 text-xl mb-2" />
+              <p className="text-xl font-bold">100%</p>
+              <p className="text-sm text-gray-600">Training</p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-gray-50 hover:shadow-md transition">
+              <FaIdCard className="mx-auto text-blue-600 text-xl mb-2" />
+              <p className="text-xl font-bold">Fast</p>
+              <p className="text-sm text-gray-600">Licence</p>
+            </div>
+          </div>
 
           {/* HIGHLIGHTS */}
-          <div className="grid md:grid-cols-2 gap-4 mt-4">
-            <div className="flex items-center gap-2 text-gray-700">
-              ✅ Experienced Instructors
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div className="flex items-center gap-3">
+              <FaCheckCircle className="text-green-500 text-lg" />
+              <span className="text-gray-700">Experienced Instructors</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-700">
-              ✅ 100% Personal Attention
+
+            <div className="flex items-center gap-3">
+              <FaCheckCircle className="text-green-500 text-lg" />
+              <span className="text-gray-700">100% Personal Attention</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-700">
-              ✅ Licence Assistance
+
+            <div className="flex items-center gap-3">
+              <FaCheckCircle className="text-green-500 text-lg" />
+              <span className="text-gray-700">Licence Assistance</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-700">
-              ✅ Practical Driving Skills
+
+            <div className="flex items-center gap-3">
+              <FaCheckCircle className="text-green-500 text-lg" />
+              <span className="text-gray-700">Practical Driving Skills</span>
             </div>
           </div>
 
           {/* CTA */}
-          <div className="mt-6 flex flex-col md:flex-row gap-4 justify-center md:justify-start">
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 hover:scale-105 transition duration-300 shadow-md">
-              View Courses
-            </button>
+          <div className="pt-6 flex flex-col sm:flex-row gap-4">
+            <Link
+              to="/services"
+              className="flex-1 text-center bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 hover:scale-[1.02] transition duration-300 shadow-md"
+            >
+              View Services
+            </Link>
 
             <button
-              className="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 hover:scale-105 transition duration-300 shadow-md"
+              className="flex-1 bg-green-500 text-white px-6 py-3 rounded-xl hover:bg-green-600 hover:scale-[1.02] transition duration-300 shadow-md"
               onClick={() => window.open('https://wa.me/919022441860')}
             >
               Chat on WhatsApp
