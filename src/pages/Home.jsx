@@ -1,4 +1,3 @@
-import drivingImg from '../assets/driving.png';
 import GoogleMaps from '../components/GoogleMaps';
 import Hero from './Hero';
 import Middle from './Middle';

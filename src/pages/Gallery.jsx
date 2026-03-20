@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import gallery from '../data/gallery';
+import RoadSignsUI from '../components/RoadSignsUI';
 
 function Gallery() {
   const [selectedGroup, setSelectedGroup] = useState(null);
@@ -29,7 +30,7 @@ function Gallery() {
     <section className="py-16 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center">Gallery</h2>
-
+        <RoadSignsUI />
         {/* GROUPS */}
         {gallery.map((group, gIndex) => (
           <div key={gIndex} className="mt-10">
