@@ -23,21 +23,27 @@ export default function MockTest() {
     setQuestions(shuffle(allQuestions).slice(0, TOTAL));
   }, []);
 
+  const [finished, setFinished] = useState(false);
+
   useEffect(() => {
     if (!questions.length) return;
     if (timeLeft <= 0) {
+      setFinished(true);
       setShowResult(true);
       return;
     }
     const t = setInterval(() => setTimeLeft((t) => t - 1), 1000);
     return () => clearInterval(t);
-  }, [timeLeft, questions]);
+  }, [timeLeft, questions, finished]);
 
   const handleSelect = (index) => {
     setAnswers({ ...answers, [current]: index });
   };
 
-  const handleSubmit = () => setShowResult(true);
+  const handleSubmit = () => {
+    setFinished(true);
+    setShowResult(true);
+  };
 
   const getScore = () => {
     let s = 0;
@@ -135,7 +141,9 @@ export default function MockTest() {
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
           <h1 className="font-bold text-xl">RTO Mock Test</h1>
-          <div className="font-mono text-red-600 text-lg">
+          <div
+            className={`font-mono text-lg ${timeLeft < 120 ? 'text-red-600 animate-pulse' : 'text-gray-700'}`}
+          >
             ⏱ {minutes}:{seconds.toString().padStart(2, '0')}
           </div>
         </div>

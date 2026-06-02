@@ -10,6 +10,7 @@ import Footer from './pages/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsapp';
 import MockTest from './pages/MockTest';
 import ScrollToTop from './components/ScrollToTop';
+import MockTestNew from './pages/MockTestNew';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mocktest" element={<MockTest />} />
+        <Route path="/mocktestnew" element={<MockTestNew />} />
       </Routes>
       <Footer />
       <FloatingWhatsApp />

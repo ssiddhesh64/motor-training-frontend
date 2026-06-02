@@ -49,6 +49,7 @@ function Navbar() {
           {renderLink('/gallery', 'Gallery')}
           {renderLink('/contact', 'Contact')}
           {renderLink('/mocktest', 'Mock Test')}
+          {renderLink('/mocktestnew', 'Mock Test New')}
         </div>
 
         {/* Mobile Button */}
@@ -90,6 +91,20 @@ function Navbar() {
             className="block text-gray-700"
           >
             Contact
+          </Link>
+          <Link
+            to="/mocktest"
+            onClick={() => setMenuOpen(false)}
+            className="block text-gray-700"
+          >
+            Mock Test
+          </Link>
+          <Link
+            to="/mocktestnew"
+            onClick={() => setMenuOpen(false)}
+            className="block text-gray-700"
+          >
+            Mock Test New
           </Link>
         </div>
       )}
