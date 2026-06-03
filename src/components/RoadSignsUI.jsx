@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { roadSigns } from '../data/roadSigns';
 
 const getImagePath = (category, slug) =>
-  `/motor-training-frontend/signs/${category.toLowerCase()}/${slug}.jpg`;
+  `${import.meta.env.BASE_URL}signs/${category.toLowerCase()}/${slug}.jpg`;
 
 export default function RoadSignsUI() {
   const categories = Object.keys(roadSigns);

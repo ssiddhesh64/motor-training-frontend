@@ -2,7 +2,7 @@
 
 Frontend for **Royal Motor Training School**, a local, offline-first motor driving school in Malad East, Mumbai (est. 1989). The site helps students learn about courses, prepare for the RTO theory exam, and reach the school by phone or WhatsApp.
 
-**Live site:** [https://ssiddhesh64.github.io/motor-training-frontend](https://ssiddhesh64.github.io/motor-training-frontend)
+**Live site:** [https://ssiddhesh64.github.io/royal-motors-frontend](https://ssiddhesh64.github.io/royal-motors-frontend)
 
 ## Features
 
@@ -19,29 +19,29 @@ There is no backend in this repo. Enquiries are handled offline via phone, Whats
 
 ## Tech stack
 
-| Tool | Version (approx.) |
-|------|-------------------|
-| [React](https://react.dev/) | 19 |
-| [Vite](https://vite.dev/) | 8 |
-| [Tailwind CSS](https://tailwindcss.com/) | 4 |
-| [React Router](https://reactrouter.com/) | 7 |
-| [react-toastify](https://fkhadra.github.io/react-toastify/) | 11 |
-| [react-icons](https://react-icons.github.io/react-icons/) | 5 |
+| Tool                                                        | Version (approx.) |
+| ----------------------------------------------------------- | ----------------- |
+| [React](https://react.dev/)                                 | 19                |
+| [Vite](https://vite.dev/)                                   | 8                 |
+| [Tailwind CSS](https://tailwindcss.com/)                    | 4                 |
+| [React Router](https://reactrouter.com/)                    | 7                 |
+| [react-toastify](https://fkhadra.github.io/react-toastify/) | 11                |
+| [react-icons](https://react-icons.github.io/react-icons/)   | 5                 |
 
 Also uses ESLint, Prettier, and [gh-pages](https://github.com/tschaub/gh-pages) for deployment.
 
 ## Routes
 
-| Path | Page |
-|------|------|
-| `/` | Home (hero, about, map, services preview) |
-| `/services` | Services & pricing |
-| `/gallery` | Photo gallery |
-| `/contact` | Contact form, details, and map |
-| `/how-it-works` | Enrolment and training process |
-| `/faq` | Frequently asked questions |
-| `/documents` | Document checklist |
-| `/mocktest` | RTO theory mock test |
+| Path            | Page                                      |
+| --------------- | ----------------------------------------- |
+| `/`             | Home (hero, about, map, services preview) |
+| `/services`     | Services & pricing                        |
+| `/gallery`      | Photo gallery                             |
+| `/contact`      | Contact form, details, and map            |
+| `/how-it-works` | Enrolment and training process            |
+| `/faq`          | Frequently asked questions                |
+| `/documents`    | Document checklist                        |
+| `/mocktest`     | RTO theory mock test                      |
 
 ## Prerequisites
 
@@ -51,8 +51,8 @@ Also uses ESLint, Prettier, and [gh-pages](https://github.com/tschaub/gh-pages) 
 ## Setup
 
 ```bash
-git clone https://github.com/ssiddhesh64/motor-training-frontend.git
-cd motor-training-frontend
+git clone https://github.com/ssiddhesh64/royal-motors-frontend.git
+cd royal-motors-frontend
 npm install
 npm run dev
 ```
@@ -61,15 +61,15 @@ Open the URL shown in the terminal (usually `http://localhost:5173`).
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start Vite dev server with hot reload |
-| `npm run build` | Production build to `dist/` |
-| `npm run preview` | Serve the production build locally |
-| `npm run lint` | Run ESLint |
-| `npm run format` | Format code with Prettier |
-| `npm run clean` | ESLint auto-fix + Prettier |
-| `npm run deploy` | Build and publish `dist/` to GitHub Pages |
+| Command           | Description                               |
+| ----------------- | ----------------------------------------- |
+| `npm run dev`     | Start Vite dev server with hot reload     |
+| `npm run build`   | Production build to `dist/`               |
+| `npm run preview` | Serve the production build locally        |
+| `npm run lint`    | Run ESLint                                |
+| `npm run format`  | Format code with Prettier                 |
+| `npm run clean`   | ESLint auto-fix + Prettier                |
+| `npm run deploy`  | Build and publish `dist/` to GitHub Pages |
 
 `deploy` runs `predeploy` (`npm run build`) automatically before publishing.
 
@@ -88,10 +88,10 @@ src/
 ## Contact
 
 **Royal Motor Training School**  
-Sheetal Dwar Bldg, Shivaji Chowk, Daftary Road, Malad East, Mumbai – 400097  
+Sheetal Dwar Bldg, Shivaji Chowk, Daftary Road, Malad East, Mumbai – 400097
 
-- Phone: +91 90224 41860  
-- Website enquiries: use the [Contact](/contact) page or WhatsApp from the site  
+- Phone: +91 90224 41860
+- Website enquiries: use the [Contact](/contact) page or WhatsApp from the site
 
 ---
 
