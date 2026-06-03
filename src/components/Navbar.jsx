@@ -46,6 +46,9 @@ function Navbar() {
         <div className="hidden md:flex gap-6 font-medium items-center h-full">
           {renderLink('/', 'Home')}
           {renderLink('/services', 'Services')}
+          {renderLink('/how-it-works', 'How It Works')}
+          {renderLink('/documents', 'Documents')}
+          {renderLink('/faq', 'FAQ')}
           {renderLink('/gallery', 'Gallery')}
           {renderLink('/contact', 'Contact')}
           {renderLink('/mocktest', 'Mock Test')}
@@ -71,11 +74,32 @@ function Navbar() {
             Home
           </Link>
           <Link
-            to="/courses"
+            to="/services"
             onClick={() => setMenuOpen(false)}
             className="block text-gray-700"
           >
             Services
+          </Link>
+          <Link
+            to="/how-it-works"
+            onClick={() => setMenuOpen(false)}
+            className="block text-gray-700"
+          >
+            How It Works
+          </Link>
+          <Link
+            to="/documents"
+            onClick={() => setMenuOpen(false)}
+            className="block text-gray-700"
+          >
+            Documents
+          </Link>
+          <Link
+            to="/faq"
+            onClick={() => setMenuOpen(false)}
+            className="block text-gray-700"
+          >
+            FAQ
           </Link>
           <Link
             to="/gallery"
@@ -90,6 +114,13 @@ function Navbar() {
             className="block text-gray-700"
           >
             Contact
+          </Link>
+          <Link
+            to="/mocktest"
+            onClick={() => setMenuOpen(false)}
+            className="block text-gray-700"
+          >
+            Mock Test
           </Link>
         </div>
       )}

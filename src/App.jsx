@@ -8,8 +8,11 @@ import { ToastContainer } from 'react-toastify';
 import './index.css';
 import Footer from './pages/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsapp';
-import MockTest from './pages/MockTest';
 import ScrollToTop from './components/ScrollToTop';
+import MockTest from './pages/MockTest';
+import HowItWorks from './pages/HowItWorks';
+import FAQ from './pages/FAQ';
+import DocumentChecklist from './pages/DocumentChecklist';
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/documents" element={<DocumentChecklist />} />
         <Route path="/mocktest" element={<MockTest />} />
       </Routes>
       <Footer />
