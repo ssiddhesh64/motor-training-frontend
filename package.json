@@ -1,5 +1,5 @@
 {
-  "name": "motor-training-frontend",
+  "name": "royal-motors-frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -42,5 +42,5 @@
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.0"
   },
-  "homepage": "https://ssiddhesh64.github.io/motor-training-frontend"
+  "homepage": "https://ssiddhesh64.github.io/royal-motors-frontend"
 }
