@@ -11,6 +11,9 @@ import FloatingWhatsApp from './components/FloatingWhatsapp';
 import MockTest from './pages/MockTest';
 import ScrollToTop from './components/ScrollToTop';
 import MockTestNew from './pages/MockTestNew';
+import HowItWorks from './pages/HowItWorks';
+import FAQ from './pages/FAQ';
+import DocumentChecklist from './pages/DocumentChecklist';
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/documents" element={<DocumentChecklist />} />
         <Route path="/mocktest" element={<MockTest />} />
         <Route path="/mocktestnew" element={<MockTestNew />} />
       </Routes>

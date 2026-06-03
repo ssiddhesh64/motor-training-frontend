@@ -7,7 +7,7 @@ import {
   FaClock,
 } from 'react-icons/fa';
 
-const WHATSAPP_NUMBER = '919022441860';
+import { WHATSAPP_NUMBER } from '../constants/contact';
 
 function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', message: '' });
