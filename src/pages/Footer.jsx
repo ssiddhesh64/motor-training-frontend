@@ -7,30 +7,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
         {/* BRAND */}
         <div>
-          <svg
-            viewBox="0 0 360 90"
-            className="h-12 transition duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_gold]"
-          >
-            <defs>
-              <linearGradient id="goldMain" x1="0" x2="1">
-                <stop offset="0%" stopColor="#facc15" />
-                <stop offset="100%" stopColor="#eab308" />
-              </linearGradient>
-            </defs>
-
-            <path
-              d="M50 25 L56 10 L64 20 L72 10 L78 25 Z"
-              fill="url(#goldMain)"
-            />
-
-            <text x="40" y="55" fontSize="36" fontWeight="700" fill="#b91c1c">
-              ROYAL
-            </text>
-
-            <text x="42" y="75" fontSize="13" fill="#FFFFFF" letterSpacing="2">
-              MOTOR DRIVING SCHOOL
-            </text>
-          </svg>
+          <RoyalLogo darkText="#FFFFFF" />
           <p className="mt-3 text-sm text-gray-400">
             Royal Motor Training School has been helping students become
             confident drivers since 1989.
@@ -38,26 +15,77 @@ function Footer() {
         </div>
 
         {/* QUICK LINKS */}
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
-
-          <ul className="space-y-2">
-            <li>
-              <Link to="/" className="hover:text-white transition">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/services" className="hover:text-white transition">
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:text-white transition">
-                Contact
-              </Link>
-            </li>
-          </ul>
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-3">
+              Quick Links
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="hover:text-white transition text-sm">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="hover:text-white transition text-sm"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/how-it-works"
+                  className="hover:text-white transition text-sm"
+                >
+                  How It Works
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="hover:text-white transition text-sm"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-3">Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/documents"
+                  className="hover:text-white transition text-sm"
+                >
+                  Documents
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="hover:text-white transition text-sm">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/mocktest"
+                  className="hover:text-white transition text-sm"
+                >
+                  Mock Test
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/gallery"
+                  className="hover:text-white transition text-sm"
+                >
+                  Gallery
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* CONTACT INFO */}

@@ -56,8 +56,10 @@ function Navbar() {
 
         {/* Mobile Button */}
         <button
-          className="md:hidden text-gray-800 text-2xl"
+          className="md:hidden text-gray-800 text-2xl cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
         >
           ☰
         </button>

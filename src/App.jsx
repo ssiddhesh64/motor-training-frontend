@@ -13,8 +13,10 @@ import MockTest from './pages/MockTest';
 import HowItWorks from './pages/HowItWorks';
 import FAQ from './pages/FAQ';
 import DocumentChecklist from './pages/DocumentChecklist';
+import useDocumentTitle from './hooks/useDocumentTitle';
 
 function App() {
+  useDocumentTitle();
   return (
     <>
       <ScrollToTop />

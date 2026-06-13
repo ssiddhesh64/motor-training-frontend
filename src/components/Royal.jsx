@@ -1,4 +1,4 @@
-const RoyalLogo = () => (
+const RoyalLogo = ({ darkText = '#1e3a8a' }) => (
   <svg
     viewBox="0 0 360 90"
     className="h-12 transition duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_gold]"
@@ -16,7 +16,7 @@ const RoyalLogo = () => (
       ROYAL
     </text>
 
-    <text x="42" y="75" fontSize="13" fill="#1e3a8a" letterSpacing="2">
+    <text x="42" y="75" fontSize="13" fill={darkText} letterSpacing="2">
       MOTOR DRIVING SCHOOL
     </text>
   </svg>

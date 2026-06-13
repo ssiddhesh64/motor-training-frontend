@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import gallery from '../data/gallery';
 import RoadSignsUI from '../components/RoadSignsUI';
 
@@ -11,20 +11,37 @@ function Gallery() {
     setCurrentIndex(index);
   };
 
-  const closeSlider = () => {
+  const closeSlider = useCallback(() => {
     setSelectedGroup(null);
-  };
+  }, []);
 
-  const nextImage = () => {
-    setCurrentIndex((prev) => (prev + 1) % selectedGroup.images.length);
-  };
+  const nextImage = useCallback(() => {
+    if (selectedGroup) {
+      setCurrentIndex((prev) => (prev + 1) % selectedGroup.images.length);
+    }
+  }, [selectedGroup]);
 
-  const prevImage = () => {
-    setCurrentIndex(
-      (prev) =>
-        (prev - 1 + selectedGroup.images.length) % selectedGroup.images.length
-    );
-  };
+  const prevImage = useCallback(() => {
+    if (selectedGroup) {
+      setCurrentIndex(
+        (prev) =>
+          (prev - 1 + selectedGroup.images.length) % selectedGroup.images.length
+      );
+    }
+  }, [selectedGroup]);
+
+  useEffect(() => {
+    if (!selectedGroup) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') closeSlider();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedGroup, closeSlider, nextImage, prevImage]);
 
   return (
     <section className="py-16 px-6 bg-white">
@@ -56,30 +73,41 @@ function Gallery() {
 
         {/* MODAL SLIDER */}
         {selectedGroup && (
-          <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+          <div
+            onClick={(e) => {
+              if (e.target === e.currentTarget) closeSlider();
+            }}
+            className="fixed inset-0 bg-black/85 flex items-center justify-center z-50"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Image lightbox"
+          >
             <button
               onClick={closeSlider}
-              className="absolute top-5 right-5 text-white text-3xl"
+              className="absolute top-5 right-5 text-white text-3xl cursor-pointer hover:text-gray-300 transition"
+              aria-label="Close lightbox"
             >
               ✕
             </button>
 
             <button
               onClick={prevImage}
-              className="absolute left-5 text-white text-3xl"
+              className="absolute left-5 text-white text-4xl cursor-pointer hover:text-gray-300 transition p-2"
+              aria-label="Previous image"
             >
               ‹
             </button>
 
             <img
               src={selectedGroup.images[currentIndex]}
-              alt=""
-              className="max-h-[80vh] rounded-lg"
+              alt={`Gallery image ${currentIndex + 1} of ${selectedGroup.images.length}`}
+              className="max-h-[80vh] max-w-[85vw] rounded-lg select-none"
             />
 
             <button
               onClick={nextImage}
-              className="absolute right-5 text-white text-3xl"
+              className="absolute right-5 text-white text-4xl cursor-pointer hover:text-gray-300 transition p-2"
+              aria-label="Next image"
             >
               ›
             </button>

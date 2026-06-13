@@ -4,7 +4,12 @@ import { questions as allQuestions } from '../data/questions';
 import StartScreen from '../components/StartTestScreen';
 
 function shuffle(arr) {
-  return [...arr].sort(() => 0.5 - Math.random());
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
 }
 
 const TOTAL = 15;
@@ -411,7 +416,7 @@ export default function MockTest() {
           </div>
 
           {/* Palette Sidebar */}
-          <div className="bg-white rounded-2xl shadow p-4 order-first md:order-last">
+          <div className="bg-white rounded-2xl shadow p-4 md:order-last">
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
               Questions
             </p>
