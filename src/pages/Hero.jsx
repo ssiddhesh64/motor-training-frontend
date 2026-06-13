@@ -1,4 +1,4 @@
-import drivingImg from '../assets/driving.png';
+import drivingImg from '../assets/driving.webp';
 
 function Hero() {
   return (

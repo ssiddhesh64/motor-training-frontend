@@ -39,10 +39,25 @@ function ChecklistSection({ title, items, checked, onToggle }) {
 
 function DocumentChecklist() {
   const [vehicle, setVehicle] = useState('all');
-  const [checked, setChecked] = useState({});
+  const [checked, setChecked] = useState(() => {
+    try {
+      const saved = localStorage.getItem('royal_motors_checklist');
+      return saved ? JSON.parse(saved) : {};
+    } catch {
+      return {};
+    }
+  });
 
   const toggle = (id) => {
-    setChecked((prev) => ({ ...prev, [id]: !prev[id] }));
+    setChecked((prev) => {
+      const next = { ...prev, [id]: !prev[id] };
+      try {
+        localStorage.setItem('royal_motors_checklist', JSON.stringify(next));
+      } catch {
+        // Fallback for private browsing
+      }
+      return next;
+    });
   };
 
   const sections = useMemo(() => {

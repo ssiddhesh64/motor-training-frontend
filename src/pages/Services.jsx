@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import services from '../data/servicesData';
+import { whatsappUrl } from '../constants/contact';
 
 const ServiceCard = React.memo(({ service }) => (
   <div
-    className="bg-gray-50 rounded-xl div-6 shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-1"
+    className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-1"
     role="article"
     aria-labelledby={`service-${service.id}-title`}
   >
@@ -25,11 +26,18 @@ const ServiceCard = React.memo(({ service }) => (
     </div>
 
     <button
-      className="text-blue-600 font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 py-4"
-      aria-label={`Learn more about ${service.name}`}
-      onClick={() => alert(`Learn more about ${service.name}`)} // Placeholder action
+      className="text-blue-600 font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 py-4 cursor-pointer"
+      aria-label={`Enquire about ${service.name}`}
+      onClick={() =>
+        window.open(
+          whatsappUrl(
+            `Hi Royal Motor Driving School, I would like to enquire about your service: ${service.name}.`
+          ),
+          '_blank'
+        )
+      }
     >
-      Learn More →
+      Enquire Now →
     </button>
   </div>
 ));
