@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { questions as allQuestions } from '../data/questions';
 import StartScreen from '../components/StartTestScreen';
+import MockTestPaywall from '../components/MockTestPaywall';
 
 function shuffle(arr) {
   const copy = [...arr];
@@ -199,6 +200,7 @@ function ResultScreen({ questions, answers, timeTaken, onRestart }) {
 
 // ─── Main MockTest ─────────────────────────────────────────────────────────────
 export default function MockTest() {
+  const [unlocked, setUnlocked] = useState(false);
   const [started, setStarted] = useState(false);
   // const [questions, setQuestions] = useState([]);
 
@@ -275,6 +277,11 @@ export default function MockTest() {
     setShowConfirm(false);
     setTimetaken(0);
   };
+
+  // ── Paywall ──────────────────────────────────────────────────────────────────
+  if (!unlocked) {
+    return <MockTestPaywall onUnlock={() => setUnlocked(true)} />;
+  }
 
   // ── Pre-start ────────────────────────────────────────────────────────────────
   if (!started) {

@@ -1,139 +1,113 @@
 import { Link } from 'react-router-dom';
 import {
   FaCheckCircle,
-  FaUsers,
-  FaAward,
-  FaCar,
-  FaIdCard,
+  FaGraduationCap,
+  FaHandshake,
+  FaFileAlt,
 } from 'react-icons/fa';
 
-function Middle() {
+const features = [
+  {
+    icon: FaGraduationCap,
+    title: "RTO 'A' Grade Accredited",
+    desc: "Established in 1989 and accredited with an 'A' grade by the RTO authority. Over 2 lakh+ students have successfully graduated.",
+    color: 'text-blue-600',
+    bg: 'bg-blue-50',
+  },
+  {
+    icon: FaHandshake,
+    title: 'Professional Training',
+    desc: 'We go beyond just passing tests. Our caring instructors ensure every student receives complete attention and hands-on experience.',
+    color: 'text-emerald-600',
+    bg: 'bg-emerald-50',
+  },
+  {
+    icon: FaFileAlt,
+    title: 'Hassle-Free Licence',
+    desc: 'We handle your entire licence process smoothly and efficiently, allowing you to focus on learning with confidence.',
+    color: 'text-violet-600',
+    bg: 'bg-violet-50',
+  },
+];
+
+const highlights = [
+  'Experienced Instructors',
+  '100% Personal Attention',
+  'Licence Assistance',
+  'Practical Driving Skills',
+];
+
+function WhyChooseUs() {
   return (
-    <section className="px-6 md:px-10 py-12 bg-gray-50">
-      <div className="max-w-5xl mx-auto text-center">
-        {/* HEADING */}
-        <h1 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
-          Learn Driving with Confidence 🚗
-        </h1>
-        <p className="mt-4 text-gray-600 text-lg md:text-xl">
-          Trusted by 2+ lakh students since 1989
-        </p>
-        {/* CONTENT CARD */}
-        <div className="mt-10 bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100 text-left space-y-6 hover:shadow-xl transition duration-300">
-          {/* INTRO */}
-          <div className="space-y-6">
-            {/* BLOCK 1 */}
-            <div className="flex flex-col gap-2 pl-4 border-l-4 border-blue-500">
-              <h3 className="text-lg font-semibold text-gray-800">
-                Royal Motor Training School
+    <section
+      className="px-6 md:px-10 py-14 md:py-20 bg-gray-50"
+      aria-labelledby="why-heading"
+    >
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <span className="text-xs font-semibold tracking-widest uppercase text-blue-600">
+            Why Choose Us
+          </span>
+          <h2
+            id="why-heading"
+            className="text-2xl md:text-4xl font-bold text-gray-800 mt-2"
+          >
+            Your Journey to Safe Driving Starts Here
+          </h2>
+        </div>
+
+        {/* Feature Grid */}
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
+          {features.map((f) => (
+            <div
+              key={f.title}
+              className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <div
+                className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${f.bg} ${f.color} text-xl mb-4`}
+              >
+                <f.icon />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                {f.title}
               </h3>
-
-              <span className="text-gray-600 leading-relaxed">
-                Established in 1989 and accredited with an 'A' grade by the RTO
-                authority. Over{' '}
-                <span className="font-semibold text-blue-600">2 lakh+</span>{' '}
-                students have successfully graduated from our institute.
-              </span>
+              <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
             </div>
+          ))}
+        </div>
 
-            {/* BLOCK 2 */}
-            <div className="flex flex-col gap-2 pl-4 border-l-4 border-blue-500">
-              <h4 className="text-md font-semibold text-gray-800">
-                Professional Training Approach
-              </h4>
-
-              <span className="text-gray-600 leading-relaxed">
-                We go beyond just helping you pass driving tests. Our caring
-                instructors ensure that every student receives complete
-                attention and hands-on experience.
-              </span>
-            </div>
-
-            {/* BLOCK 3 */}
-            <div className="flex flex-col gap-2 pl-4 border-l-4 border-blue-500 pb-4">
-              <h4 className="text-md font-semibold text-gray-800">
-                Hassle-Free Licence Process
-              </h4>
-
-              <span className="text-gray-600 leading-relaxed">
-                We handle your entire licence process smoothly and efficiently,
-                allowing you to focus on learning with confidence.
-              </span>
-            </div>
-          </div>
-
-          {/* DIVIDER */}
-          <div className="border-t border-gray-200 pt-6"></div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div className="p-4 rounded-xl bg-gray-50 hover:shadow-md transition">
-              <FaUsers className="mx-auto text-blue-600 text-xl mb-2" />
-              <p className="text-xl font-bold">2L+</p>
-              <p className="text-sm text-gray-600">Students</p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-gray-50 hover:shadow-md transition">
-              <FaAward className="mx-auto text-blue-600 text-xl mb-2" />
-              <p className="text-xl font-bold">30+</p>
-              <p className="text-sm text-gray-600">Years</p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-gray-50 hover:shadow-md transition">
-              <FaCar className="mx-auto text-blue-600 text-xl mb-2" />
-              <p className="text-xl font-bold">100%</p>
-              <p className="text-sm text-gray-600">Training</p>
-            </div>
-
-            <div className="p-4 rounded-xl bg-gray-50 hover:shadow-md transition">
-              <FaIdCard className="mx-auto text-blue-600 text-xl mb-2" />
-              <p className="text-xl font-bold">Fast</p>
-              <p className="text-sm text-gray-600">Licence</p>
-            </div>
-          </div>
-
-          {/* HIGHLIGHTS */}
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div className="flex items-center gap-3">
-              <FaCheckCircle className="text-green-500 text-lg" />
-              <span className="text-gray-700">Experienced Instructors</span>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <FaCheckCircle className="text-green-500 text-lg" />
-              <span className="text-gray-700">100% Personal Attention</span>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <FaCheckCircle className="text-green-500 text-lg" />
-              <span className="text-gray-700">Licence Assistance</span>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <FaCheckCircle className="text-green-500 text-lg" />
-              <span className="text-gray-700">Practical Driving Skills</span>
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="pt-6 flex flex-col sm:flex-row gap-4">
-            <Link
-              to="/services"
-              className="flex-1 text-center bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 hover:scale-[1.02] transition duration-300 shadow-md"
+        {/* Highlights */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+          {highlights.map((h) => (
+            <div
+              key={h}
+              className="flex items-center gap-2.5 bg-white rounded-xl px-4 py-3 shadow-sm border border-gray-100"
             >
-              View Services
-            </Link>
+              <FaCheckCircle className="text-green-500 text-sm flex-shrink-0" />
+              <span className="text-gray-700 text-sm font-medium">{h}</span>
+            </div>
+          ))}
+        </div>
 
-            <button
-              className="flex-1 bg-green-500 text-white px-6 py-3 rounded-xl hover:bg-green-600 hover:scale-[1.02] transition duration-300 shadow-md"
-              onClick={() => window.open('https://wa.me/919022441860')}
-            >
-              Chat on WhatsApp
-            </button>
-          </div>
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            to="/services"
+            className="text-center bg-blue-600 text-white px-8 py-3 rounded-xl hover:bg-blue-700 hover:scale-[1.02] transition-all duration-300 shadow-md font-semibold"
+          >
+            View Services
+          </Link>
+          <button
+            className="bg-green-500 text-white px-8 py-3 rounded-xl hover:bg-green-600 hover:scale-[1.02] transition-all duration-300 shadow-md font-semibold cursor-pointer"
+            onClick={() => window.open('https://wa.me/919022441860')}
+          >
+            Chat on WhatsApp
+          </button>
         </div>
       </div>
     </section>
   );
 }
 
-export default Middle;
+export default WhyChooseUs;
