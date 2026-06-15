@@ -1,7 +1,7 @@
 import GoogleMaps from '../components/GoogleMaps';
 import StatsBar from '../components/StatsBar';
 import Hero from './Hero';
-import Middle from './Middle';
+import Middle from './NewMiddle';
 import Services from './Services';
 
 function Home() {

@@ -21,7 +21,7 @@ function HowItWorks() {
                   aria-hidden
                 />
               )}
-              <span className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center z-10">
+              <span className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 text-white font-bold flex items-center justify-center z-10">
                 {item.step}
               </span>
               <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex-1">

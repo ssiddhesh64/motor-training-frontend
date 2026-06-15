@@ -78,7 +78,7 @@ export default function MockTestOld() {
               {passed ? 'PASS' : 'FAIL'}
             </p>
             <button
-              className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-xl"
+              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-xl"
               onClick={() => window.location.reload()}
             >
               Restart
@@ -151,7 +151,7 @@ export default function MockTestOld() {
         {/* Progress Bar */}
         <div className="w-full bg-gray-300 h-2 rounded mb-4">
           <div
-            className="bg-blue-600 h-2 rounded"
+            className="bg-blue-500 h-2 rounded"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -170,7 +170,7 @@ export default function MockTestOld() {
                   className={`w-full text-left p-3 rounded-xl border transition
                     ${
                       answers[current] === i
-                        ? 'bg-blue-600 text-white'
+                        ? 'bg-blue-500 text-white'
                         : 'bg-white hover:bg-gray-100'
                     }`}
                   onClick={() => handleSelect(i)}
@@ -190,7 +190,7 @@ export default function MockTestOld() {
               </button>
 
               <button
-                className="px-4 py-2 bg-blue-600 text-white rounded-xl disabled:opacity-50"
+                className="px-4 py-2 bg-blue-500 text-white rounded-xl disabled:opacity-50"
                 disabled={current === TOTAL - 1}
                 onClick={() => setCurrent((c) => c + 1)}
               >
@@ -208,7 +208,7 @@ export default function MockTestOld() {
                   className={`text-sm py-2 rounded-lg
                     ${
                       current === i
-                        ? 'bg-blue-600 text-white'
+                        ? 'bg-blue-500 text-white'
                         : answers[i] !== undefined
                           ? 'bg-green-200'
                           : 'bg-gray-100'

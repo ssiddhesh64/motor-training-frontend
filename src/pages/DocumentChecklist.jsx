@@ -87,7 +87,7 @@ function DocumentChecklist() {
               onClick={() => setVehicle(opt.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition ${
                 vehicle === opt.id
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-blue-500 text-white'
                   : 'bg-white border border-gray-200 text-gray-700 hover:border-blue-300'
               }`}
             >

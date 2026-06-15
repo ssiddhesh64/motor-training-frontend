@@ -34,11 +34,11 @@ const stats = [
 
 function useCountUp(target, duration = 1800, shouldAnimate = false) {
   const [count, setCount] = useState(0);
-  const animatedRef = useRef(false);
+  const hasRun = useRef(false);
 
   useEffect(() => {
-    if (!shouldAnimate || target === 0 || animatedRef.current) return;
-    animatedRef.current = true;
+    if (!shouldAnimate || target === 0 || hasRun.current) return;
+    hasRun.current = true;
     let start = 0;
     const steps = duration / 16;
     const increment = target / steps;
@@ -54,7 +54,10 @@ function useCountUp(target, duration = 1800, shouldAnimate = false) {
     return () => clearInterval(timer);
   }, [target, duration, shouldAnimate]);
 
-  return { count, started: animatedRef.current || (shouldAnimate && target === 0) };
+  return {
+    count,
+    started: count > 0 || (shouldAnimate && target === 0),
+  };
 }
 
 function StatItem({ stat, animate }) {
@@ -70,12 +73,20 @@ function StatItem({ stat, animate }) {
 
   return (
     <div className="flex items-center gap-4 md:gap-5 px-6 md:px-8 py-6">
-      <stat.icon className="text-2xl md:text-3xl flex-shrink-0" style={{ color: '#8a7d94' }} />
+      <stat.icon
+        className="text-2xl md:text-3xl flex-shrink-0"
+        style={{ color: '#8a7d94' }}
+      />
       <div>
-        <p className="text-2xl md:text-3xl font-bold leading-none" style={{ color: '#6b6375' }}>
+        <p
+          className="text-2xl md:text-3xl font-bold leading-none"
+          style={{ color: '#6b6375' }}
+        >
           {formatValue()}
         </p>
-        <p className="text-sm md:text-base mt-0.5" style={{ color: '#8a7d94' }}>{stat.label}</p>
+        <p className="text-sm md:text-base mt-0.5" style={{ color: '#8a7d94' }}>
+          {stat.label}
+        </p>
       </div>
     </div>
   );
@@ -100,10 +111,7 @@ function StatsBar() {
   }, []);
 
   return (
-    <section
-      ref={ref}
-      className="bg-gray-50 shadow-lg"
-    >
+    <section ref={ref} className="bg-gray-50 shadow-lg">
       <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-300">
         {stats.map((stat) => (
           <StatItem key={stat.label} stat={stat} animate={animate} />
