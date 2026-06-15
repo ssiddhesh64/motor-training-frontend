@@ -30,11 +30,22 @@ const features = [
   },
 ];
 
+// const highlights = [
+//     'Experienced Instructors',
+//     '100% Personal Attention',
+//     'Licence Assistance',
+//     'Practical Driving Skills',
+// ];
+
 const highlights = [
-  'Experienced Instructors',
-  '100% Personal Attention',
+  '2,00,000+ Students',
+  'RTO A Grade School',
+  '35+ Years Experience',
+  'Certified Instructors',
+  'Flexible Timings',
   'Licence Assistance',
-  'Practical Driving Skills',
+  'Road Test Preparation',
+  'Modern Training Vehicles',
 ];
 
 function Middle() {
@@ -98,12 +109,12 @@ function Middle() {
         <div className="flex flex-col justify-evenly sm:flex-row">
           <Link
             to="/services"
-            className="text-center bg-blue-500 text-white px-8 py-3 rounded-xl hover:bg-blue-700 hover:scale-[1.02] transition-all duration-300 shadow-md font-semibold"
+            className="w-full mr-8 text-center bg-blue-500 text-white px-8 py-3 rounded-xl hover:bg-blue-700 hover:scale-[1.02] transition-all duration-300 shadow-md font-semibold"
           >
             View Services
           </Link>
           <button
-            className="bg-green-500 text-white px-8 py-3 rounded-xl hover:bg-green-600 hover:scale-[1.02] transition-all duration-300 shadow-md font-semibold cursor-pointer"
+            className="w-full bg-green-500 text-white px-8 py-3 rounded-xl hover:bg-green-600 hover:scale-[1.02] transition-all duration-300 shadow-md font-semibold cursor-pointer"
             onClick={() => window.open('https://wa.me/919022441860')}
           >
             Chat on WhatsApp
