@@ -30,13 +30,6 @@ const features = [
   },
 ];
 
-// const highlights = [
-//     'Experienced Instructors',
-//     '100% Personal Attention',
-//     'Licence Assistance',
-//     'Practical Driving Skills',
-// ];
-
 const highlights = [
   '2,00,000+ Students',
   'RTO A Grade School',
@@ -84,10 +77,10 @@ function Middle() {
               >
                 <f.icon />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              <h3 className="text-lg font-bold text-gray-800 mb-2">
                 {f.title}
               </h3>
-              <p className="text-gray-500 text-xs leading-relaxed">{f.desc}</p>
+              <p className="w-fit text-gray-500 text-sm">{f.desc}</p>
             </div>
           ))}
         </div>

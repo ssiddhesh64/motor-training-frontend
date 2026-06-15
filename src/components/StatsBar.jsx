@@ -73,20 +73,12 @@ function StatItem({ stat, animate }) {
 
   return (
     <div className="flex items-center gap-4 md:gap-5 px-6 md:px-8 py-6">
-      <stat.icon
-        className="text-2xl md:text-3xl flex-shrink-0"
-        style={{ color: '#8a7d94' }}
-      />
+      <stat.icon className="text-2xl md:text-3xl shrink-0" />
       <div>
-        <p
-          className="text-2xl md:text-3xl font-bold leading-none"
-          style={{ color: '#6b6375' }}
-        >
+        <p className="text-2xl text-black md:text-3xl font-bold leading-none">
           {formatValue()}
         </p>
-        <p className="text-sm md:text-base mt-0.5" style={{ color: '#8a7d94' }}>
-          {stat.label}
-        </p>
+        <p className="text-sm text-black md:text-base mt-0.5">{stat.label}</p>
       </div>
     </div>
   );
