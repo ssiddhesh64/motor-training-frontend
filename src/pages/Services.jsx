@@ -53,17 +53,21 @@ ServiceCard.propTypes = {
 
 function Services() {
   return (
-    <section className="py-16 px-6 bg-white" aria-labelledby="services-heading">
+    <section className="py-10 px-6 bg-white" aria-labelledby="services-heading">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2
           id="services-heading"
-          className="text-3xl md:text-4xl font-bold text-center text-gray-800"
+          className="text-8xl md:text-4xl font-bold text-center text-gray-800"
+          style={{ fontSize: '2.5rem', fontWeight: 800 }}
         >
           Our Services
         </h2>
 
-        <div className="text-center text-gray-600 mt-3">
+        <div
+          className="text-center text-gray-600 mt-3"
+          style={{ fontSize: '1.2rem', fontWeight: 500 }}
+        >
           Choose the right training program and start your driving journey today
         </div>
 

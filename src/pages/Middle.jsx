@@ -40,18 +40,22 @@ const highlights = [
 function Middle() {
   return (
     <section
-      className="px-6 md:px-10 py-4 md:py-20 bg-gray-50"
+      className="px-6 md:px-10 pt-4 pb-2 mt-4 md:pt-10 md:pb-10 bg-gray-50"
       aria-labelledby="why-heading"
     >
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
-          <span className="text-xs font-semibold tracking-widest uppercase text-blue-600">
+          <span
+            className="font-stretch-expanded tracking-widest uppercase text-blue-600"
+            style={{ fontSize: '2.5rem', fontWeight: 800 }}
+          >
             Why Choose Us
           </span>
           <h2
             id="why-heading"
-            className="text-2xl md:text-4xl font-bold text-gray-800 mt-2"
+            className="font-stretch-expanded md:text-4xl text-gray-800"
+            style={{ fontSize: '1rem', fontWeight: 800, marginTop: '1.5rem' }}
           >
             Your Journey to Safe Driving Starts Here
           </h2>
@@ -72,7 +76,7 @@ function Middle() {
               <h3 className="text-lg font-semibold text-gray-800 mb-2">
                 {f.title}
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
+              <p className="text-gray-500 text-xs leading-relaxed">{f.desc}</p>
             </div>
           ))}
         </div>
@@ -91,7 +95,7 @@ function Middle() {
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col justify-evenly sm:flex-row">
           <Link
             to="/services"
             className="text-center bg-blue-500 text-white px-8 py-3 rounded-xl hover:bg-blue-700 hover:scale-[1.02] transition-all duration-300 shadow-md font-semibold"
