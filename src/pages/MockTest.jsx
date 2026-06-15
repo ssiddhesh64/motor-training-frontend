@@ -21,7 +21,7 @@ function PaletteLegend() {
   return (
     <div className="flex flex-wrap gap-3 mt-3 text-xs text-gray-500">
       <span className="flex items-center gap-1">
-        <span className="w-4 h-4 rounded bg-blue-600 inline-block" /> Current
+        <span className="w-4 h-4 rounded bg-blue-500 inline-block" /> Current
       </span>
       <span className="flex items-center gap-1">
         <span className="w-4 h-4 rounded bg-green-200 inline-block" /> Answered
@@ -132,7 +132,7 @@ function ResultScreen({ questions, answers, timeTaken, onRestart }) {
               Pass mark: {PASS_MARK}/{TOTAL}
             </p>
             <button
-              className="mt-2 bg-blue-600 text-white px-8 py-2 rounded-xl hover:bg-blue-700 transition font-semibold"
+              className="mt-2 bg-blue-500 text-white px-8 py-2 rounded-xl hover:bg-blue-700 transition font-semibold"
               onClick={onRestart}
             >
               Try Again
@@ -340,7 +340,7 @@ export default function MockTest() {
         {/* Progress Bar */}
         <div className="w-full bg-gray-300 h-2 rounded-full mb-4 overflow-hidden">
           <div
-            className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+            className="bg-blue-500 h-2 rounded-full transition-all duration-300"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -382,7 +382,7 @@ export default function MockTest() {
                   className={`w-full text-left p-3 rounded-xl border transition
                     ${
                       answers[current] === i
-                        ? 'bg-blue-600 text-white border-blue-600'
+                        ? 'bg-blue-500 text-white border-blue-600'
                         : 'bg-white border-gray-200 hover:bg-gray-50 hover:border-gray-300'
                     }`}
                   onClick={() => handleSelect(i)}
@@ -406,7 +406,7 @@ export default function MockTest() {
               </button>
               <button
                 aria-label="Next question"
-                className="px-5 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition disabled:opacity-40 disabled:cursor-not-allowed"
+                className="px-5 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-700 transition disabled:opacity-40 disabled:cursor-not-allowed"
                 disabled={current === TOTAL - 1}
                 onClick={() => setCurrent((c) => c + 1)}
               >
@@ -429,7 +429,7 @@ export default function MockTest() {
                   className={`text-sm py-2 rounded-lg font-medium transition
                     ${
                       current === i
-                        ? 'bg-blue-600 text-white'
+                        ? 'bg-blue-500 text-white'
                         : flagged.has(i)
                           ? 'bg-amber-100 border border-amber-300 text-amber-700'
                           : answers[i] !== undefined

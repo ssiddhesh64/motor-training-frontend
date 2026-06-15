@@ -35,7 +35,7 @@ export default function RoadSignsUI() {
               className={`px-4 py-2 rounded-xl font-medium transition
                 ${
                   activeTab === cat
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-blue-500 text-white'
                     : 'bg-white shadow'
                 }`}
             >

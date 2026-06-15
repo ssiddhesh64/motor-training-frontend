@@ -25,7 +25,7 @@ function ContentCta({
         </a>
         <a
           href={PHONE_TEL}
-          className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition"
+          className="inline-flex items-center justify-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition"
         >
           <FaPhoneAlt />
           Call Now
